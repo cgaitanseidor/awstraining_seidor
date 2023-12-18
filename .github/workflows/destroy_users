@@ -1,0 +1,24 @@
+name: Destroy users and roles
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: The path to the data file
+        required: true
+
+jobs:
+  destroy-users:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install boto3
+
+      - name: Destroy users
+        run: |
+          python destroy-users.py ${{ inputs.data }}
