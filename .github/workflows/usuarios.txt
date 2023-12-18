@@ -1,0 +1,12 @@
+nombre_de_usuario,correo_electronico,rol
+usuario1,usuario1@example.com,IAM_USER
+usuario2,usuario2@example.com,IAM_USER
+usuario3,usuario3@example.com,IAM_USER
+usuario4,usuario4@example.com,IAM_USER_S3
+usuario5,usuario5@example.com,IAM_USER_LAMBDA
+usuario6,usuario6@example.com,IAM_USER_REDSHIFT
+usuario7,usuario7@example.com,IAM_USER_GLUE
+usuario8,usuario8@example.com,IAM_USER_STEP_FUNCTION
+usuario9,usuario9@example.com,IAM_USER_ATHENA
+usuario10,usuario10@example.com,IAM_USER_QUICKSIGHT
+usuario11,usuario11@example.com,IAM_USER_SAGEMAKER
