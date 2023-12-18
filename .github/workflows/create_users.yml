@@ -1,0 +1,24 @@
+name: Create users and roles AWS
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: The path to the data file
+        required: true
+
+jobs:
+  create-users:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install boto3
+
+      - name: Create users
+        run: |
+          python create-users.py ${{ inputs.data }}
